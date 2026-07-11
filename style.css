@@ -1,0 +1,359 @@
+body {background-color: #F6FCFB;
+font-family: Arial, sans-serif;}
+h1 {color: #194B63;
+margin: 10px 0;
+text-align: center;
+font-size: 36px;}
+p {margin-top: 20px;
+font-size: 16px;}
+h2 {color: #34C3C8;}
+header {display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #34C3C8;
+    color: white;
+    font-size: 44px;
+    font-weight: bold;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif, sans-serif;
+    nav {font-size: 18px;}}
+.branding {display: flex;
+align-items: center;
+gap: 30px;}
+.hero {text-align: center;
+    padding: 40px 20px;}
+.hero p {text-align: justify;
+    max-width: 900px;
+    margin: 20px auto 0;
+    line-height: 1.6;}
+.hero img {max-width: 100%;
+    height: auto;}
+.photo {max-width: 40%;
+    height: auto;
+    margin: 20px auto;
+    display: block;}
+figure {width: 40%;
+    max-width: 500px;
+    margin: 20px auto;}
+figure img {width: 40%;
+    height: auto;
+    display: block;}
+.menu a {color: white;
+    text-decoration: none;
+    transition: 0.3s;
+    margin: 0 8px;}
+.menu a:hover {color: #194B63;}
+.hero {border-radius: 20px;}
+.cards {display: flex;
+    gap: 15px;
+    padding: 15px 15px;}
+.card {background-color: rgb(182, 249, 255);
+    padding: 10px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+    h2 {font-size: 24px;
+    margin-bottom: 10px;
+    text-align: center;}
+    flex: 1;
+    min-width: 170px;
+    max-height: 250px;
+    display: flex;
+    flex-direction: column;}
+.card-icon {font-size: 48px;
+    margin-bottom: 10px;
+    text-align: center;
+    margin-top: auto}
+.btn {display: inline-block;
+    background-color: #46f2f8;
+    color: white;
+    padding: 12px 12px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+    align-self: center;
+    margin-top: auto}
+.btn:hover {background-color: #194B63;
+    transform: scale(1.05);}
+.card-description {opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.3s;}
+.card:hover .card-description {opacity: 1;
+    max-height: 100px;}
+.card {transition: 0.3s;}
+.card:hover {transform: translateY(-10px);
+box-shadow: inset 0 4px 6px rgba(225, 129, 129, 0.1);}
+.membre {display: flex;
+    align-items: center;
+    gap: 40px;
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #aef2f5;
+    border-radius: 16px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);}
+.membre-photo {width: 35%;
+    margin: 0;
+    perspective: 1200px;
+    position: relative;}
+.flip-card {
+    position: relative;
+    width: 100%;
+    height: 320px;
+}
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+    transition: transform 0.65s ease;
+    -webkit-transition: -webkit-transform 0.65s ease;
+    transform: rotateY(0deg);
+}
+.membre-photo:hover .flip-card-inner {
+    transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+}
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+}
+.flip-card-front {
+    z-index: 2;
+    transform: rotateY(0deg);
+    background: #ffffff;
+}
+.flip-card-front img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+.flip-card-back {
+    transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+    background: linear-gradient(180deg, #34C3C8 0%, #aef2f5 100%);
+    color: #0f2b3d;
+    padding: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.card-back-content {
+    width: 100%;
+}
+.card-back-content h3 {
+    margin-top: 0;
+    margin-bottom: 16px;
+    color: #fff;
+    font-size: 1.4rem;
+}
+.card-back-content p {
+    margin: 8px 0;
+    line-height: 1.45;
+    color: #072334;
+}
+.card-back-content strong {
+    color: #194B63;
+}
+.membre-texte {flex: 1;}
+.membre-texte h2 {text-align: left;
+    margin-top: 0;}
+.membre-inverse {flex-direction: row-reverse;}
+.plat {display: flex;
+    align-items: center;
+    gap: 40px;
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #aef2f5;
+    border-radius: 16px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);}
+.plat-photo {width: 40%;
+    margin: 0;}
+.plat-photo img {width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 12px;}
+.plat-texte {flex: 1;}
+.plat-texte h2 {margin-top: 0;
+    text-align: left;}
+.plat-inverse {flex-direction: row-reverse;}
+.galerie {display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;}
+.photo {margin: 0;
+    overflow: hidden;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);}
+.photo img {width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+    cursor: pointer;}
+.photo figcaption {padding: 12px;
+    text-align: center;}
+.lightbox {display: none;
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.85);
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    z-index: 1000;}
+.lightbox.show {display: flex;}
+.lightbox img {max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+    border-radius: 8px;}
+.lightbox-close {position: absolute;
+    top: 20px;
+    right: 30px;
+    border: none;
+    background: none;
+    color: white;
+    font-size: 45px;
+    cursor: pointer;}
+.menu-toggle {display: none;}
+.menu {display: flex;
+    gap: 20px;}
+.img {max-width: 50%;
+    height: 250px;
+    display: block;}
+.treasure-image {
+    max-width: 40%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+}
+@media (max-width: 768px) {.cards {
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;}
+    .card {
+        min-width: 0;
+        width: 55px;
+        padding: 10px;
+        background: none;
+        box-shadow: none;}
+    .card h2,
+    .card-description,
+    .card .btn {display: none;}
+    .card-icon {font-size: 30px;}
+    header {position: relative;
+        padding: 12px 16px;}
+    .branding {gap: 8px;}
+    .titre {font-size: 24px;}
+    .logo {font-size: 28px;}
+    .menu-toggle {display: block;
+        border: none;
+        background: none;
+        color: white;
+        font-size: 32px;
+        cursor: pointer;}
+    .menu {display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 14px;
+        background-color: #34C3C8;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+        z-index: 100;}
+    .menu.show {display: flex;}
+    .menu a {font-size: 30px;
+        text-decoration: none;}
+    .cards {display: none;}
+}
+
+
+
+
+#scrollTopBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    border: none;
+    outline: none;
+    background-color: #34C3C8;
+    color: white;
+    cursor: pointer;
+    padding: 12px 15px;
+    border-radius: 50%;
+    font-size: 20px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+#scrollTopBtn.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+#scrollTopBtn:hover {
+    background-color: #194B63;
+}
+
+.secret-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(52, 195, 200, 0);
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    z-index: 1000;
+}
+
+.secret-button:hover {
+    background-color: rgba(52, 195, 200, 0.25);
+    transform: scale(1.05);
+}
+
+.secret-button::after {
+    content: "🔒";
+    color: #ffffff;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.secret-button:hover::after {
+    opacity: 1;
+}
+
+@media (max-width: 768px) {
+    .secret-button {
+        bottom: 15px;
+        right: 15px;
+        width: 36px;
+        height: 36px;
+    }
+}
+
